@@ -2,11 +2,10 @@ import Head from "next/head";
 import { useState } from "react";
 import InnerBanner from "@/components/InnerBanner";
 import Link from "next/link";
-
-const WA_BASE = "https://wa.me/919876543210?text=";
+import { waUrl } from "@/lib/contact";
 
 function bookMsg(pkg: string) {
-  return WA_BASE + encodeURIComponent(`Namaste! I want to book the ${pkg}. Please share availability and details.`);
+  return waUrl(`Namaste! I want to book the ${pkg}. Please share availability and details.`);
 }
 
 const packages = [

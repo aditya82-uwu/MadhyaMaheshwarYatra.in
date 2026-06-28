@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { WA_URL } from "@/lib/contact";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -8,9 +9,6 @@ const navLinks = [
   { href: "/gallery", label: "Gallery" },
   { href: "/contact-us", label: "Contact Us" },
 ];
-
-const WA_URL =
-  "https://wa.me/919876543210?text=Namaste%21+I+am+interested+in+Madhyamaheshwar+Yatra+tour+packages.+Please+share+details.";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,8 +28,12 @@ export default function Header() {
     <nav className={`site-nav${menuOpen ? " menu-open" : ""}`}>
       <div className="container nav-inner">
         <Link href="/" className="logo" onClick={() => setMenuOpen(false)}>
-          <span className="logo-main">Madhyamaheshwar</span>
-          <span className="logo-tag">Yatra — Raunlenk</span>
+          <img
+            src="/logo.png"
+            alt="Madhyamaheshwar Yatra"
+            height={60}
+            style={{ height: "60px", width: "auto", display: "block" }}
+          />
         </Link>
 
         <div className="nav-links">

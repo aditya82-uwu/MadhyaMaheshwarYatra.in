@@ -1,12 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
-
-const WA_TEXT = encodeURIComponent(
-  "Namaste! I am interested in Madhyamaheshwar Yatra tour packages. Please share details."
-);
-const WA_URL = `https://wa.me/919876543210?text=${WA_TEXT}`;
-const CALL_URL = "tel:+919876543210";
+import { WA_URL, CALL_URL, PHONE, EMAIL } from "@/lib/contact";
 
 function ContactForm() {
   const [form, setForm] = useState({
@@ -18,7 +13,7 @@ function ContactForm() {
     const text = encodeURIComponent(
       `Namaste! I would like to book a tour.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email || "N/A"}\nPackage: ${form.package}\nPersons: ${form.persons}\nDate: ${form.date}\nMessage: ${form.message || "N/A"}`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, "_blank");
+    window.open(`https://wa.me/${PHONE.replace("+", "")}?text=${text}`, "_blank");
   }
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -478,7 +473,7 @@ export default function Home() {
                   <div className="cm-icon">✉️</div>
                   <div className="cm-text">
                     <strong>Email</strong>
-                    <a href="mailto:info@madhyamaheshwaryatra.in">info@madhyamaheshwaryatra.in</a>
+                    <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
                   </div>
                 </div>
                 <div className="cm-item">

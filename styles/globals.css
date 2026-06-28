@@ -214,15 +214,17 @@ a { color: inherit; text-decoration: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: var(--clr-forest-deep);
-  box-shadow: 0 2px 18px rgba(0,0,0,0.30);
+  background: var(--clr-white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   transition: background var(--t-base);
 }
 
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  padding-block: var(--sp-4);
+  padding-block: var(--sp-3);
 }
+
+.logo img { display: block; }
 
 .logo { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
 .logo-main {
@@ -245,7 +247,7 @@ a { color: inherit; text-decoration: none; }
 .nav-links a {
   font-size: var(--fs-sm);
   font-weight: var(--fw-med);
-  color: rgba(255,255,255,0.78);
+  color: var(--clr-forest-deep);
   letter-spacing: 0.03em;
   transition: color var(--t-fast);
   position: relative;
@@ -258,7 +260,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--clr-saffron);
   transition: width var(--t-base);
 }
-.nav-links a:hover { color: var(--clr-white); }
+.nav-links a:hover { color: var(--clr-saffron-deep); }
 .nav-links a:hover::after { width: 100%; }
 
 .nav-cta { background: var(--clr-wa) !important; color: var(--clr-white) !important; padding: var(--sp-2) var(--sp-5); border-radius: var(--radius-sm); }
@@ -266,17 +268,18 @@ a { color: inherit; text-decoration: none; }
 .nav-cta:hover { background: var(--clr-wa-deep) !important; }
 
 .hamburger { display: none; flex-direction: column; gap: 5px; width: 28px; background: none; border: none; cursor: pointer; padding: 0; }
-.hamburger span { display: block; height: 2px; background: var(--clr-white); border-radius: 2px; transition: var(--t-base); }
+.hamburger span { display: block; height: 2px; background: var(--clr-forest-deep); border-radius: 2px; transition: var(--t-base); }
 
 /* Mobile nav */
 .site-nav.menu-open .nav-links {
   display: flex; flex-direction: column;
   position: absolute;
   top: 100%; left: 0; right: 0;
-  background: var(--clr-forest-deep);
+  background: var(--clr-white);
   padding: var(--sp-5) var(--sp-6);
   gap: var(--sp-4);
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid var(--clr-snow-deep);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 }
 
 /* =====================================================

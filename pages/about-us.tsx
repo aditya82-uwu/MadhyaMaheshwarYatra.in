@@ -1,10 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import InnerBanner from "@/components/InnerBanner";
-
-const WA_URL =
-  "https://wa.me/919876543210?text=Namaste%21+I+am+interested+in+Madhyamaheshwar+Yatra+tour+packages.+Please+share+details.";
-const CALL_URL = "tel:+919876543210";
+import { WA_URL, CALL_URL } from "@/lib/contact";
 
 export default function AboutUs() {
   return (

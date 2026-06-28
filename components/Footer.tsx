@@ -1,8 +1,5 @@
 import Link from "next/link";
-
-const WA_URL =
-  "https://wa.me/919876543210?text=Namaste%21+I+am+interested+in+Madhyamaheshwar+Yatra+tour+packages.+Please+share+details.";
-const CALL_URL = "tel:+919876543210";
+import { WA_URL, CALL_URL, PHONE_DISPLAY, EMAIL } from "@/lib/contact";
 
 export default function Footer() {
   return (
@@ -24,20 +21,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Mountain SVG divider */}
-      <div className="footer-mountain-divider" aria-hidden="true">
-        <svg
-          viewBox="0 0 1440 60"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <polygon
-            fill="#F9F4EB"
-            points="0,60 0,40 240,0 480,30 720,5 960,28 1200,0 1440,22 1440,60"
-          />
-        </svg>
       </div>
 
       <footer className="site-footer">
@@ -98,21 +81,21 @@ export default function Footer() {
                   <span className="fc-icon">💬</span>
                   <div>
                     <strong>WhatsApp</strong>
-                    <span>+91 98765 43210</span>
+                    <span>{PHONE_DISPLAY}</span>
                   </div>
                 </a>
                 <a href={CALL_URL} className="fc-item">
                   <span className="fc-icon">📞</span>
                   <div>
                     <strong>Call Us</strong>
-                    <span>+91 98765 43210</span>
+                    <span>{PHONE_DISPLAY}</span>
                   </div>
                 </a>
-                <a href="mailto:info@madhyamaheshwaryatra.in" className="fc-item">
+                <a href={`mailto:${EMAIL}`} className="fc-item">
                   <span className="fc-icon">✉️</span>
                   <div>
                     <strong>Email</strong>
-                    <span>info@madhyamaheshwaryatra.in</span>
+                    <span>{EMAIL}</span>
                   </div>
                 </a>
               </div>

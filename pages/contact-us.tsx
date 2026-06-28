@@ -1,10 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import InnerBanner from "@/components/InnerBanner";
-
-const WA_URL =
-  "https://wa.me/919876543210?text=Namaste%21+I+am+interested+in+Madhyamaheshwar+Yatra+tour+packages.+Please+share+details.";
-const CALL_URL = "tel:+919876543210";
+import { WA_URL, CALL_URL, PHONE, PHONE_DISPLAY, EMAIL } from "@/lib/contact";
 
 function BookingForm() {
   const [form, setForm] = useState({
@@ -16,7 +13,7 @@ function BookingForm() {
     const text = encodeURIComponent(
       `Namaste! I would like to book a tour.\n\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email || "N/A"}\nPackage: ${form.package}\nPersons: ${form.persons}\nPreferred Date: ${form.date}\nArrival City: ${form.arrive || "N/A"}\nMessage: ${form.message || "N/A"}`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, "_blank");
+    window.open(`https://wa.me/${PHONE.replace("+", "")}?text=${text}`, "_blank");
   }
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -126,7 +123,7 @@ export default function ContactUs() {
                 <span className="cs-icon">📞</span>
                 <div className="cs-text">
                   <strong>Call Us</strong>
-                  <span>+91 98765 43210</span>
+                  <span>{PHONE_DISPLAY}</span>
                 </div>
               </a>
               <a href={WA_URL} className="cs-item cs-item--wa" target="_blank" rel="noopener noreferrer">
@@ -136,11 +133,11 @@ export default function ContactUs() {
                   <span>Fastest response</span>
                 </div>
               </a>
-              <a href="mailto:info@madhyamaheshwaryatra.in" className="cs-item cs-item--email">
+              <a href={`mailto:${EMAIL}`} className="cs-item cs-item--email">
                 <span className="cs-icon">✉️</span>
                 <div className="cs-text">
                   <strong>Email</strong>
-                  <span>info@madhyamaheshwaryatra.in</span>
+                  <span>{EMAIL}</span>
                 </div>
               </a>
               <div className="cs-item cs-item--location">

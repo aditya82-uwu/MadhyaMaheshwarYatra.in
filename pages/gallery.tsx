@@ -1,9 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import InnerBanner from "@/components/InnerBanner";
-
-const WA_URL =
-  "https://wa.me/919876543210?text=Namaste%21+I+am+interested+in+Madhyamaheshwar+Yatra+tour+packages.+Please+share+details.";
+import { WA_URL } from "@/lib/contact";
 
 const PHOTOS = [
   { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=500&auto=format&fit=crop&q=70", alt: "Madhyamaheshwar temple in snow", cap: "Madhyamaheshwar Temple", cat: "Temple" },
