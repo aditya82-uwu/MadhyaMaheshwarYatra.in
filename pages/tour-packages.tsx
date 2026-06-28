@@ -126,17 +126,6 @@ const included = [
   "✅ Sleeping bags & trekking poles on request",
 ];
 
-const excluded = [
-  "❌ Personal travel insurance",
-  "❌ Helicopter rides (optional add-on)",
-  "❌ Temple donation and puja items",
-  "❌ Alcohol and aerated beverages",
-  "❌ Porter charges (₹800/day — optional)",
-  "❌ Any meals not mentioned in itinerary",
-  "❌ GST (5% extra on base package price)",
-  "❌ Any cost due to natural calamity or road block",
-];
-
 type AccordionProps = { items: typeof itinerary };
 
 function ItineraryAccordion({ items }: AccordionProps) {
@@ -388,30 +377,21 @@ export default function TourPackages() {
           </div>
         </section>
 
-        {/* ── INCLUSIONS / EXCLUSIONS ─────────────────────── */}
+        {/* ── INCLUSIONS ──────────────────────────────────── */}
         <section className="inc-exc-section">
           <div className="container">
             <div className="inc-exc-header">
               <p className="sec-label">Package Details</p>
-              <h2 className="sec-head">What&apos;s Included &amp; What&apos;s Not</h2>
+              <h2 className="sec-head">What&apos;s Included in Your Package</h2>
+              <p className="sec-sub">Everything is taken care of — just show up and experience the Himalayas.</p>
             </div>
-            <div className="inc-exc-grid">
-              <div className="inc-card">
-                <div className="inc-card-head">
-                  <h3>Inclusions</h3>
-                </div>
-                <ul>
-                  {included.map((item) => <li key={item}>{item}</li>)}
-                </ul>
+            <div className="inc-card inc-card--full">
+              <div className="inc-card-head">
+                <h3>Everything Included — No Hidden Costs</h3>
               </div>
-              <div className="exc-card">
-                <div className="exc-card-head">
-                  <h3>Exclusions</h3>
-                </div>
-                <ul>
-                  {excluded.map((item) => <li key={item}>{item}</li>)}
-                </ul>
-              </div>
+              <ul className="inc-card-grid">
+                {included.map((item) => <li key={item}>{item}</li>)}
+              </ul>
             </div>
           </div>
         </section>
