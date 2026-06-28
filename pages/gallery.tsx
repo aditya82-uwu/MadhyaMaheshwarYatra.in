@@ -4,7 +4,12 @@ import InnerBanner from "@/components/InnerBanner";
 import { WA_URL } from "@/lib/contact";
 
 const PHOTOS = [
-  { src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=500&auto=format&fit=crop&q=70", alt: "Madhyamaheshwar temple in snow", cap: "Madhyamaheshwar Temple", cat: "Temple" },
+  { src: "/gallery/temple%20(1).webp", thumb: "/gallery/temple%20(1).webp", alt: "Madhyamaheshwar temple", cap: "Madhyamaheshwar Temple", cat: "Temple" },
+  { src: "/gallery/temple%20(2).webp", thumb: "/gallery/temple%20(2).webp", alt: "Madhyamaheshwar temple shrine", cap: "Temple Shrine", cat: "Temple" },
+  { src: "/gallery/temple%20(3).webp", thumb: "/gallery/temple%20(3).webp", alt: "Madhyamaheshwar temple view", cap: "Temple View", cat: "Temple" },
+  { src: "/gallery/temple%20(4).webp", thumb: "/gallery/temple%20(4).webp", alt: "Madhyamaheshwar temple darshan", cap: "Temple Darshan", cat: "Temple" },
+  { src: "/gallery/temple%20(5).webp", thumb: "/gallery/temple%20(5).webp", alt: "Madhyamaheshwar temple surroundings", cap: "Temple Surroundings", cat: "Temple" },
+  { src: "/gallery/temple%20(6).webp", thumb: "/gallery/temple%20(6).webp", alt: "Madhyamaheshwar Shivalinga", cap: "Madhyamaheshwar Shivalinga", cat: "Temple" },
   { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&auto=format&fit=crop&q=70", alt: "Himalayan peaks sunrise", cap: "Himalayan Peaks", cat: "Views" },
   { src: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=500&auto=format&fit=crop&q=70", alt: "Alpine meadows bugyal", cap: "Bantoli Bugyal", cat: "Trek" },
   { src: "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?w=500&auto=format&fit=crop&q=70", alt: "Himalayan river valley", cap: "Kedarnath Range", cat: "Views" },
@@ -14,7 +19,6 @@ const PHOTOS = [
   { src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&auto=format&fit=crop&q=70", alt: "Sacred Himalayan river", cap: "Markindey River", cat: "Trek" },
   { src: "https://images.unsplash.com/photo-1531761535209-180857e963b9?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1531761535209-180857e963b9?w=500&auto=format&fit=crop&q=70", alt: "Snowy Himalayan passes", cap: "Snow-covered Trail", cat: "Trek" },
   { src: "https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1580193769210-b8d1c049a7d9?w=500&auto=format&fit=crop&q=70", alt: "Trekkers on ridge", cap: "Ridge Walk at Sunrise", cat: "Views" },
-  { src: "https://images.unsplash.com/photo-1517824806704-9040b037703b?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1517824806704-9040b037703b?w=500&auto=format&fit=crop&q=70", alt: "Traditional Indian temple", cap: "Panch Kedar Shrine", cat: "Temple" },
   { src: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=900&auto=format&fit=crop&q=80", thumb: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=500&auto=format&fit=crop&q=70", alt: "Himalayan wildflowers", cap: "Brahmakamal Flowers", cat: "Flora" },
 ];
 
